@@ -1,65 +1,67 @@
+// GLOBAL SCOPE
+
+// MAIN INPUT USER GLOBAL SCOPE
+const grabMainInputUser = document.querySelector('.main-input-user');
+const grabButton = document.querySelector('#button');
+
+// MAIN INTRO DIV CLASS THAT HOLDS ELEMENT H2
+const grabMainIntro = document.querySelector('.main-intro');
 
 
-const letsGoButton = document.querySelector('#button');
-const userName = document.querySelector('#input');
-const startGame = document.querySelector('.start-game');
-const grabInput = document.querySelector('input');
-const mainIntro = document.querySelector('main-intro');
-const main = document.querySelector('.main-content');
-const buttonChild = document.querySelector('.main-input-user');
-const createButton = document.createElement('button');
-const gameDescription = document.createElement('h2');
 
-// letsGoButton.addEventListener('click', (enterUsername) => {
-//   enterUsername.preventDefault();
-//   let input = userName.value;
-//   startGame.remove();
-//   grabInput.remove();
-//   const gameDescription = document.createElement('h2');
-//   gameDescription.classList.add('main-intro');
-//   main.appendChild(gameDescription);
-//   gameDescription.innerHTML = `<h2> Welcome Great Shinobi ${input}.</h2> <p> You are the next great ninja shooter.
-//   Destroy as many bananas as you can within the time limit given to you to become the master ninja. <br> Watchout for those bombs! Hit KaPOW to start</p>
-//   `;
+
+
+
+  //THIS FUNCTION WILL REMOVE ONLY WELCOME INTRO
+function clickKapow() {
+  createNewInstruction();
+  removeWelcomeIntro();
+  newButton();
+
+}
+grabButton.addEventListener('click', clickKapow);
+
+function removeWelcomeIntro() {
+  const welcomeIntro = document.querySelector('#welcome'); //THIS IS THE FUNCTION THAT CLICKKAPOW WILL CALL.
+  welcomeIntro.remove();
+  grabButton.remove();
+  grabButton.removeEventListener('click', clickKapow);
+}
+
+
+function createNewInstruction() {
+  const newInstructionIntro = document.createElement('h2');
+  newInstructionIntro.setAttribute('id', 'instruction');
+  newInstructionIntro.innerHTML = 'Welcome Great Shinobi';
+  grabMainIntro.appendChild(newInstructionIntro);
+  const newInstructionDes = document.createElement('p');
+  newInstructionDes.setAttribute('id', 'instruction-desc');
+  newInstructionDes.innerHTML = `<p>You are the next great ninja shooter. Destroy as many bananas as you can within the time limit given to you to become the master ninja. <br> Watchout for those bombs! Hit KaPOW to start</p>`
+  grabMainIntro.appendChild(newInstructionDes);
+}
+
+
+
+function newButton() {
+  const createNewButton = document.createElement('button');
+  createNewButton.setAttribute('id', 'button');
+  grabMainInputUser.appendChild(createNewButton);
+  createNewButton.innerHTML = 'KA POW!!!'
+  console.log('new button added');
+  createNewButton.addEventListener('click', newButton);
+}
 //
-//   gameDescription.style.marginTop = '-50px'
-//   console.log(input);
-// })
+// function prepareGame() {
+//   const intro = document.querySelector('#instruction' 'instruction-desc'); //THIS IS THE FUNCTION THAT CLICKKAPOW WILL CALL.
+//   intro.remove();
+//   createNewButton.remove();
+//   createNewButton.removeEventListener('click', newButton);
+// }
 
 
-
-const enterUsername = function(ev) {
-  ev.preventDefault();
-  let input = userName.value;
-  letsGoButton.remove();
-  startGame.remove();
-  grabInput.remove();
-  gameDescription.classList.add('main-intro');
-  createNewButton();
-  main.appendChild(gameDescription);
-  gameDescription.innerHTML = `<h2> Welcome Great Shinobi ${input}.</h2> <p> You are the next great ninja shooter.
-  Destroy as many bananas as you can within the time limit given to you to become the master ninja. <br> Watchout for those bombs! Hit KaPOW to start</p>
-  `;
-  gameDescription.style.marginTop = '-50px';
-  letsGoButton.removeEventListener('click', console.log('clicked'), enterUsername);
-}
-letsGoButton.addEventListener('click', enterUsername);
+// const newfooter = document.createElement('footer');
+// newfooter.setAttribute('id', 'game-arena');
+// document.body.appendChild(newfooter);
 
 
-const createNewButton = function() {
-  createButton.setAttribute('id', 'new-button');
-  buttonChild.appendChild(createButton);
-  createButton.innerHTML = 'KaPOW!!'
-  createButton.style.width = '90px';
-  createButton.style.height = '25px';
-  createButton.style.fontSize = '13px';
-  createButton.style.fontWeight = 'bold'
-  createButton.style.borderRadius = '10px'
-  gameDescription.remove();
-}
-
-createButton.addEventListener('click', createNewButton);
-
-
-// MIGHT RUN INTO THIS PROBLEM IN THE FUTURE!!! THE EVENT LISTENER FOR KAPOW BUTTON IS LITTLE WEIRD.
-// IT IS NOT REMOVING THE CREATEBUTTON EVENT LISTENER. AS YOU CAN SEE ABOVE, THERE IS NOT REMOVE EVENT LISTENER.
+// prepareGame();
