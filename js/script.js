@@ -7,6 +7,8 @@ const grabButton = document.querySelector('#button');
 // MAIN INTRO DIV CLASS THAT HOLDS ELEMENT H2
 const grabMainIntro = document.querySelector('.main-intro');
 
+// body
+const body = document.querySelector('body');
 
 
 
@@ -65,3 +67,35 @@ function newButton() {
 
 
 // prepareGame();
+
+
+const createArena_Banana = () => {
+  const createArenaDiv = document.createElement('div');
+  createArenaDiv.setAttribute('id', 'arena');
+  document.body.append(createArenaDiv);
+
+  const createAnimatedBanana = document.createElement('div');
+  createAnimatedBanana.setAttribute('id', 'bananas');
+  createArenaDiv.appendChild(createAnimatedBanana);
+}
+
+createArena_Banana();
+
+
+
+function movingBananaFunction() {
+let position = 0;
+const movingBanana = setInterval(frame, 2);
+
+function frame(banana) {
+  const grabBanana = document.querySelector('#bananas');
+  if (position === 350) {
+    clearInterval();
+  } else {
+    position++;
+    grabBanana.style.bottom = position + 'px';
+    // grabBanana.style.right = position + 'px';
+  }
+}
+}
+movingBananaFunction();
