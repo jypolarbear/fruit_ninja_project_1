@@ -99,4 +99,13 @@ body {
 
 #arena {
   height: 600px;
+  position: relative;
+}
+
+#bananas {
+  position: absolute;
+  background-image: url('../img/banana.png');
+  height: 50px;
+  width: 50px;
+  bottom: 0;
 }
