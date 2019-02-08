@@ -4,6 +4,10 @@
  http://secret-fairies.surge.sh/
 
 ## User Stories
+User will experience a lot of bananas, so many bananas all the user will think about is bananas.
+Users that doesn't like bananas will love bananas when playing this banana ninja game.
+
+
 
 ## How to Install
 - clone or download it as zip file
