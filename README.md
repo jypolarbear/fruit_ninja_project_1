@@ -1,9 +1,13 @@
 # Banana Ninja
 
+## Link to deploy game.
+ http://secret-fairies.surge.sh/
+
 ## User Stories
 
 ## How to Install
-- clone, load html etc.
+- clone or download it as zip file
+- open up index.HTML or open it up in terminal.
 
 ## Game Description:
 
@@ -24,8 +28,11 @@ Making the game responsive to different view port sizes. Fruits will be in diffe
 
 
 ## MVP
-- 
-- 
+- Getting the bananas pop from bottom
+- Setting set time counter
+- Tracking scores
+- Adding event listeners to remove bananas.
+- Basic layouts.
 
 ## Post MVP
 
@@ -48,4 +55,4 @@ const createBanana = () => {
 };
 
 ```
-This block of codes creates the element div which is assigned an attribute class called 'bananas'. This element is then pushed inside an empty array as an object with the properties, position and node. The node creates the element and position gives the element random width positions in the document window. Every time this function is called it takes out the last array and sends it into the DOM. 
+This block of codes creates the element div which is assigned an attribute class called 'bananas'. This element is then pushed inside an empty array as an object with the properties, position and node. The node creates the element and position gives the element random width positions in the document window. Every time this function is called it takes out the last array and sends it into the DOM.
