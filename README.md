@@ -40,7 +40,7 @@ Making the game responsive to different view port sizes. Fruits will be in diffe
 
 ## Post MVP
 
-Have the the option to choose weapons. The weapon will be a sword and a gun, with this sword the user will get an animation as they destroy bananas. The gun will give animation effect as well. There will be bombs as well, the user needs to avoid the bombs and only shoot the bananas. If the user shoots certain amount of bombs (3) the game resets and you lose.
+Have the the option to choose weapons. The weapon will be a sword and a gun, with this sword the user will get an animation as they destroy bananas. The gun will give animation effect as well. There will be bombs as well, the user needs to avoid the bombs and only shoot the bananas. If the user shoots certain amount of bombs (3) the game resets and you lose. The game should have more funtionality of the game Fruit Ninja.
 
 # Code Snippet
 ```
