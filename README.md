@@ -1,5 +1,9 @@
-# fruit_ninja_project_1
+# Banana Ninja
 
+## User Stories
+
+## How to Install
+- clone, load html etc.
 
 ## Game Description:
 
@@ -14,9 +18,14 @@ CSS
 Javascript
 
 ## Major problems
+
 Getting infinite amount of bananas into a array and have it set inside set interval.
 Making the game responsive to different view port sizes. Fruits will be in different sizes or certain width.
 
+
+## MVP
+- 
+- 
 
 ## Post MVP
 
