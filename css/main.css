@@ -33,6 +33,10 @@ body {
   height: 100px;
   background-color: #664924;
   color: #fff;
+  background-image: url('../img/header.jpg');
+  background-position: center;
+  opacity: .8;
+
 }
 
 
